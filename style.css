@@ -1,20 +1,27 @@
 /* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding: 0;
 }
 
 header {
     background-color: #333;
     padding: 10px 0;
-    position: fixed; /* Makes the header stay on top */
+    position: fixed;
     top: 0;
-    width: calc(100% - 40px); /* Ensures the header takes full width minus the margins */
-    margin: 0 20px; /* 20px margin on the left and right */
-    z-index: 1000; /* Keeps the header on top of other content */
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    z-index: 1000;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -40,22 +47,23 @@ header .nav-links a {
     background-image: url('pics/Background.jpeg');
     background-size: cover;
     background-position: center;
-    height: 70vh; /* Full height of the viewport */
-    padding-top: 60px; /* Push content below the header */
+    height: 70vh;
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     position: relative;
-    
-    
 }
+
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    display: inline-block; /* Ensures the background only wraps the content */
-    border-radius: 10px; /* Adds rounded corners */
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
 }
+
 .hero-content h1 {
     font-size: 3rem;
 }
@@ -69,6 +77,8 @@ header .nav-links a {
     padding: 10px;
     font-size: 1rem;
     width: 50%;
+    border: 0;
+    border-radius: 20px;
 }
 
 /* Info Section with Buttons, List, and Picture */
@@ -138,7 +148,8 @@ header .nav-links a {
     margin-bottom: 20px;
     gap: 20px;
 }
-#infoList .mini-container{
+
+#infoList .mini-container {
     display: flex;
     flex-direction: column;
 }
@@ -172,64 +183,20 @@ header .nav-links a {
 }
 
 #infoList .change-image:hover {
-    background-color: rgb(100,100,100);
-}
-#infoList .change-image:active {
-    background-color: rgb(100,100,100);
+    background-color: rgb(100, 100, 100);
 }
 
+#infoList .change-image:active {
+    background-color: rgb(100, 100, 100);
+}
 
 .right-content img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
-/* Ensure the image takes up the same space and smoothly transitions */
-#rightImage {
-    width: 100%;       /* Image takes up 100% of its container's width */
-    height: 400px;     /* Set a fixed height */
-    object-fit: cover; /* Ensures the image fits within the given space without distortion */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade transition when the image changes */
-    opacity: 1;
-    margin-top: 50px;
-}
 
-/* Adding a hidden class for fade effect */
-.hidden {
-    opacity: 0;
-}
-
-
-
-/* CTA Section with Centered Elements */
-/* FAQ Section Styling */
-.cta-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f4f4f4;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.faq-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-    color: #555;
-}
-
-.faq-list li {
-    margin-bottom: 15px;
-}
-
+/* FAQ Section */
 .faq-question {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -264,49 +231,62 @@ header .nav-links a {
     margin-top: 10px;
 }
 
-/* Answer shown when the button is clicked */
 .faq-answer.show {
     display: block;
 }
 
-.cta-section button {
-    padding: 12px 25px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
+/* Mobile Styles */
+@media (max-width: 600px) {
+    header .nav-links {
+        flex-direction: column;
+    }
 
-.cta-section button:hover {
-    background-color: rgb(20, 20, 20);
-    transform: translateY(-3px);
-}
+    .hero {
+        height: 50vh;
+        padding-top: 60px;
+    }
 
-.cta-section button:active {
-    transform: translateY(0);
-}
+    .hero-content h1 {
+        font-size: 2rem;
+    }
 
+    .hero-content p {
+        font-size: 1.2rem;
+    }
 
+    .info-section {
+        flex-direction: column;
+        padding: 20px;
+    }
 
-/* Footer Section */
-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    color: white;
-    padding: 10px 50px;
-    align-items: center;
-}
+    .info-section .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-footer p,
-footer a {
-    margin: 0;
-}
+    .info-section h2 {
+        font-size: 1.5rem;
+    }
 
-footer a {
-    color: white;
-    text-decoration: none;
+    #infoList li {
+        gap: 10px;
+    }
+
+    .cta-section {
+        padding: 40px 20px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-section button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }

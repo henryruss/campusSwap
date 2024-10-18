@@ -13,12 +13,72 @@ const storageMartImages = [
     "pics/pic8.jpg"
 ];
 
+// Arrays of list items content for Marketplace and Storage Mart
+const marketplaceListItems = [
+    {
+        mainText: "Browse Listings",
+        subText: "Find great deals on items posted by fellow students."
+    },
+    {
+        mainText: "Post Wants",
+        subText: "Can't find what you're looking for? Ask anonymously with our seeking feature."
+    },
+    {
+        mainText: "Sell Items",
+        subText: "Upload your items for sale, or sell directly to seekers."
+    },
+    {
+        mainText: "Grow Your Brand",
+        subText: "Market your products, showcase reviews, and post updates on your seller page."
+    }
+];
+
+const storageMartListItems = [
+    {
+        mainText: "Store Your Stuff",
+        subText: "Find affordable storage space on or near campus."
+    },
+    {
+        mainText: "Request Specific Storage",
+        subText: "Find storage on an item-by-item basis with our seeking feature."
+    },
+    {
+        mainText: "Make Passive Income",
+        subText: "Give your stuff to a holder to be placed on the market place and make a comission when it sells."
+    },
+    {
+        mainText: "Become a Holder",
+        subText: "Get paid to rent out your space or make a comission when stored items sell"
+    }];
+
 // Function to update the image buttons with the correct set
 function updateImageButtons(images) {
     const buttons = document.querySelectorAll(".change-image");
     buttons.forEach((button, index) => {
         button.setAttribute("data-image", images[index]);
     });
+}
+
+// Function to update the list items based on the selected category
+function updateListItems(items) {
+    const infoList = document.getElementById("infoList");
+    infoList.innerHTML = ''; // Clear current items
+
+    items.forEach((item, index) => {
+        const li = document.createElement("li");
+        
+        li.innerHTML = `
+            <button class="change-image" data-image="${index === 0 ? marketplaceImages[index] : storageMartImages[index]}"></button>
+            <div class="mini-container">
+                <span class="main-text">${item.mainText}</span>
+                <span class="subtext">${item.subText}</span>
+            </div>
+        `;
+        
+        infoList.appendChild(li);
+    });
+
+    addChangeImageListener(); // Reattach the event listeners to the new buttons
 }
 
 // Function to change the image smoothly
@@ -53,45 +113,40 @@ function addChangeImageListener() {
     });
 }
 
-// Function to automatically toggle through the buttons and images
-let currentButtonIndex = 0;
-const buttons = document.querySelectorAll(".change-image");
-
-function autoToggleButtons() {
-    // Turn off all buttons first
-    buttons.forEach(button => button.classList.remove("active"));
-
-    // Turn on the next button in the sequence
-    const currentButton = buttons[currentButtonIndex];
-    currentButton.classList.add("active");
-
-    // Change the image associated with the active button smoothly
-    const imageSrc = currentButton.getAttribute("data-image");
-    changeImageSmoothly(imageSrc);
-
-    // Move to the next button, reset if at the end
-    currentButtonIndex = (currentButtonIndex + 1) % buttons.length;
-}
-
-// Set an interval for automatic toggling (e.g., every 2 seconds)
-setInterval(autoToggleButtons, 10000);
-
 // Event listener for the "Marketplace" button
 document.getElementById("buyButton").addEventListener("click", function() {
     updateImageButtons(marketplaceImages);  // Update the buttons for Marketplace
-    addChangeImageListener();  // Reattach the event listener to the new buttons
-    changeImageSmoothly("pics/pic1.jpg");
-    currentButtonIndex = 0;  // Reset the toggling when switching categories
+    updateListItems(marketplaceListItems);  // Update the list for Marketplace
+    changeImageSmoothly("pics/pic1.jpg");   // Change the main image
+    currentButtonIndex = 0;                 // Reset the toggling when switching categories
 });
 
 // Event listener for the "Storage Mart" button
 document.getElementById("sellButton").addEventListener("click", function() {
     updateImageButtons(storageMartImages);  // Update the buttons for Storage Mart
-    addChangeImageListener();  // Reattach the event listener to the new buttons
-    changeImageSmoothly("pics/pic5.jpeg");
-    currentButtonIndex = 0;  // Reset the toggling when switching categories
+    updateListItems(storageMartListItems);  // Update the list for Storage Mart
+    changeImageSmoothly("pics/pic5.jpeg");  // Change the main image
+    currentButtonIndex = 0;                 // Reset the toggling when switching categories
 });
 
-// Initial setup for the Marketplace images
+// Initial setup for the Marketplace images and list items
 updateImageButtons(marketplaceImages);  // Start with Marketplace images
-addChangeImageListener();  // Initialize the change image listener
+updateListItems(marketplaceListItems);  // Start with Marketplace list items
+addChangeImageListener();               // Initialize the change image listener
+
+
+// Get all FAQ question buttons
+const faqButtons = document.querySelectorAll('.faq-question');
+
+// Loop through each button and add click event listener
+faqButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Toggle the display of the answer
+        const answer = this.nextElementSibling;
+        answer.classList.toggle('show');
+        
+        // Toggle the rotation of the arrow
+        const arrow = this.querySelector('.arrow');
+        arrow.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
+    });
+});

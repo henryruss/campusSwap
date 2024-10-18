@@ -202,30 +202,94 @@ header .nav-links a {
 
 
 /* CTA Section with Centered Elements */
+/* FAQ Section Styling */
 .cta-section {
     text-align: center;
-    padding: 50px 0;
+    padding: 60px 20px;
     background-color: #f4f4f4;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-section h2 {
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.cta-section .centered-list {
+.faq-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #555;
 }
 
-.cta-section .centered-list li {
-    margin-bottom: 10px;
+.faq-list li {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #666;
+    border-left: 3px solid #333;
+    margin-top: 10px;
+}
+
+/* Answer shown when the button is clicked */
+.faq-answer.show {
+    display: block;
 }
 
 .cta-section button {
-    padding: 10px 20px;
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.cta-section button:hover {
+    background-color: rgb(20, 20, 20);
+    transform: translateY(-3px);
+}
+
+.cta-section button:active {
+    transform: translateY(0);
+}
+
+
 
 /* Footer Section */
 footer {

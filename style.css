@@ -196,7 +196,37 @@ header .nav-links a {
     border-radius: 10px;
 }
 
-/* FAQ Section */
+/* FAQ Section Styling */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+
+.faq-list li {
+    margin-bottom: 15px;
+}
+
+
 .faq-question {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -212,16 +242,13 @@ header .nav-links a {
     align-items: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 .faq-question:hover {
     background-color: #f0f0f0;
 }
-
 .arrow {
     font-size: 1rem;
     transition: transform 0.3s ease;
 }
-
 .faq-answer {
     display: none;
     padding: 10px 20px;
@@ -230,63 +257,45 @@ header .nav-links a {
     border-left: 3px solid #333;
     margin-top: 10px;
 }
-
+/* Answer shown when the button is clicked */
 .faq-answer.show {
     display: block;
 }
+.cta-section button {
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-/* Mobile Styles */
-@media (max-width: 600px) {
-    header .nav-links {
-        flex-direction: column;
-    }
+.cta-section button:hover {
+    background-color: rgb(20, 20, 20);
+    transform: translateY(-3px);
+}
+.cta-section button:active {
+    transform: translateY(0);
+}
+/* Footer Section */
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 50px;
+    align-items: center;
+}
 
-    .hero {
-        height: 50vh;
-        padding-top: 60px;
-    }
+footer p,
+footer a {
+    margin: 0;
+}
 
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-
-    .info-section {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .info-section .button-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .info-section h2 {
-        font-size: 1.5rem;
-    }
-
-    #infoList li {
-        gap: 10px;
-    }
-
-    .cta-section {
-        padding: 40px 20px;
-    }
-
-    .cta-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .cta-section button {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
+footer a {
+    color: white;
+    text-decoration: none;
 }

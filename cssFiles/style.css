@@ -275,14 +275,14 @@ header .nav-links a:hover {
     text-align: center;
 }
 
-.info-section .button-container {
+/* .info-section .button-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
     gap: 40px;
-}
+} */
 
-.info-section .button-container button {
+/* .info-section .button-container button {
     padding: 12px 20px;
     background-color: #333;
     color: white;
@@ -292,15 +292,51 @@ header .nav-links a:hover {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     min-width: 40px;
+} */
+
+/* .info-section .button-container button:hover {
+    background-color: rgb(20, 20, 20);
+    transform: translateY(-2px);
+} */
+
+/* .info-section .button-container button:active {
+    transform: translateY(0);
+} */
+.info-section .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px; /* Adds space between buttons */
+    margin-bottom: 20px;
+    margin: 20px;
+    min-height: 80px;
+}
+
+.info-section .button-container button {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.info-section .button-container button.active {
+    background-color: #000;
 }
 
 .info-section .button-container button:hover {
-    background-color: rgb(20, 20, 20);
-    transform: translateY(-2px);
+    background-color: #000;
+    transform: scale(1.05);
 }
 
-.info-section .button-container button:active {
-    transform: translateY(0);
+.info-section .button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(250,250,250, 0.6);
 }
 
 #infoList {
@@ -404,7 +440,7 @@ header .nav-links a:hover {
     padding: 15px;
     width: 100%;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #333;
     cursor: pointer;
     display: flex;
@@ -416,13 +452,13 @@ header .nav-links a:hover {
     background-color: #f0f0f0;
 }
 .arrow {
-    font-size: 1rem;
+    font-size: 1.5rem;
     transition: transform 0.3s ease;
 }
 .faq-answer {
     display: none;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
     border-left: 3px solid #333;
     margin-top: 10px;
@@ -449,6 +485,7 @@ header .nav-links a:hover {
 .cta-section button:active {
     transform: translateY(0);
 }
+
 /* Footer Section */
 /* Footer Section */
 footer {

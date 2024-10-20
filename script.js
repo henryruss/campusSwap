@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll("header .nav-links a");
     const currentPage = window.location.pathname.split("/").pop();  // Get the current file name
-    
+    buyButton.classList.add('active');
     links.forEach(link => {
         const href = link.getAttribute("href").split("/").pop();  // Get the file name of href
         if (href === currentPage) {
@@ -10,7 +10,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+buyButton.addEventListener('click', function() {
+    // Add 'active' class to the clicked button
+    buyButton.classList.add('active');
+    // Remove 'active' class from the other button
+    sellButton.classList.remove('active');
+});
 
+// Add event listener to the Storage button
+sellButton.addEventListener('click', function() {
+    // Add 'active' class to the clicked button
+    sellButton.classList.add('active');
+    // Remove 'active' class from the other button
+    buyButton.classList.remove('active');
+});
 
 const marketplaceImages = [
     "pics/pic1.jpg",

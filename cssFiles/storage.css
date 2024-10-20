@@ -119,6 +119,7 @@ font-size: 1.75rem; /* Slightly larger paragraph */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     height: 100vh;
     margin-right: 0px;
+    border-radius: 5px;
 }
 
 .filter-section h2 {

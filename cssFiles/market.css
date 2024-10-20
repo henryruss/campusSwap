@@ -34,7 +34,18 @@ header .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
 }
+
+header .nav-links a.active {
+    background-color: #555; /* Highlight color */
+    border-radius: 15px;     /* Optional: Makes the highlight smoother */
+}
+header .nav-links a:hover {
+    background-color: #555; /* Background changes on hover */
+    border-radius: 15px; /* Keeps the smooth corners */
+}
+
 /* Main Container */
 /* Main Section (Full Width) */
 .main-section {

@@ -5,6 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const seekingList = document.getElementById("seeking-list");
     const filterToggle = document.getElementById("filter-toggle");
     const filterOptions = document.querySelector(".filter-options");
+   
+    const links = document.querySelectorAll("header .nav-links a");
+    const currentPage = window.location.pathname.split("/").pop();  // Get the current page (e.g., index.html)
+    
+    console.log("Current Page Path: ", currentPage);  // Check currentPage value
+
+    links.forEach(link => {
+        const href = link.getAttribute("href").split("/").pop();  // Get href's page name
+        console.log("Link Href: ", href);  // Check href value
+        
+        if (href === currentPage) {
+            link.classList.add("active");
+            console.log("Active link: ", href);  // Should log the matched link
+        }
+    });
 
     // Toggle visibility of filter options
     filterToggle.addEventListener("click", function() {
@@ -27,34 +42,35 @@ document.addEventListener("DOMContentLoaded", function() {
         forSaleGrid.classList.add("hidden");
         loadMoreListings('seeking');
     });
+    const imageBank = [
+        "./pics/mark1.jpg",
+        "./pics/mark2.jpg",
+        "./pics/mark3.jpeg",
+        "./pics/mark4.webp",
+        "./pics/mark5.webp",
+        "./pics/mark6.jpg",
+        "./pics/mark7.jpg",
+        "./pics/mark8.webp",
+        "./pics/mark9.webp"
+    ];
+
+    const storageDescription = [
+        {description: "Bedframe", id: 1},
+        {description: "Toolbox", id: 2},
+        {description: "Black hoodie", id: 3},
+        {description: "Green umbrella", id: 4},
+        {description: "UNC Jordans", id: 5},
+        {description: "Green Xbox controller", id: 6},
+        {description: "Office chair", id: 7},
+        {description: "Couch", id: 8},
+        {description: "Kitchen cutlery", id: 9}
+    ];
 
     // Mockup lazy load function to add listings dynamically as user scrolls
     function loadMoreListings(section) {
         if (section === 'forSale') {
             // Array of image file paths
-            const imageBank = [
-                "./pics/mark1.jpg",
-                "./pics/mark2.jpg",
-                "./pics/mark3.jpeg",
-                "./pics/mark4.webp",
-                "./pics/mark5.webp",
-                "./pics/mark6.jpg",
-                "./pics/mark7.jpg",
-                "./pics/mark8.webp",
-                "./pics/mark9.webp"
-            ];
-        
-            const storageDescription = [
-                {description: "Bedframe", id: 1},
-                {description: "Toolbox", id: 2},
-                {description: "Black hoodie", id: 3},
-                {description: "Green umbrella", id: 4},
-                {description: "UNC Jordans", id: 5},
-                {description: "Green Xbox controller", id: 6},
-                {description: "Office chair", id: 7},
-                {description: "Couch", id: 8},
-                {description: "Kitchen cutlery", id: 9}
-            ];
+            
             
             for (let i = 0; i < 9; i++) {
                 const listing = document.createElement("div");

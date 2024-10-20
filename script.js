@@ -1,4 +1,17 @@
 // Arrays of images for Marketplace and Storage Mart
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("header .nav-links a");
+    const currentPage = window.location.pathname.split("/").pop();  // Get the current file name
+    
+    links.forEach(link => {
+        const href = link.getAttribute("href").split("/").pop();  // Get the file name of href
+        if (href === currentPage) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
 const marketplaceImages = [
     "pics/pic1.jpg",
     "pics/pic2.jpeg",
@@ -150,3 +163,5 @@ faqButtons.forEach(button => {
         arrow.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
     });
 });
+
+

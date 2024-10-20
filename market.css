@@ -1,0 +1,288 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    scroll-behavior: smooth;
+    background-color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    z-index: 1000;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+header .nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+header .nav-links li {
+    margin: 0 20px;
+}
+
+header .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Container */
+
+/* Main Section (Full Width) */
+.main-section {
+    width: 100%;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+/* Slogan Section */
+.slogan-section {
+    background-image: url('pics/Trek_Y_1.webp');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.slogan-background {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.slogan-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slogan-section input {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* Side-by-Side Layout (Filter and Listings) */
+.side-by-side {
+    display: flex;
+    padding: 0px;
+}
+
+/* Filter Section */
+.filter-section {
+    background-color: white;
+    width: 20%; /* Adjust as needed */
+    padding: 20px;
+    position: sticky;
+    top: 60px; /* Position filter below header */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    margin-right: 0px;
+}
+
+.filter-section h2 {
+    margin-bottom: 20px;
+}
+
+.filter-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.filter-section button:hover {
+    background-color: #555;
+}
+
+/* Listings Section */
+.listings-section {
+    flex: 1;
+    padding: 0 20px;
+    background-color: #f4f4f4;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px; /* Adds space between buttons */
+    margin-bottom: 20px;
+    margin: 20px;
+}
+
+.toggle-buttons button {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-buttons button.active {
+    background-color: #000;
+}
+
+.toggle-buttons button:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.toggle-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(250,250,250, 0.6);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+}
+
+/* Individual Listing */
+.listing-item {
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.listing-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.listing-item h3 {
+    margin: 10px 0;
+}
+
+.listing-item p {
+    font-weight: bold;
+    color: #007bff;
+}
+.arrow {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+/* Filter Dropdown */
+.filter-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+
+
+#filter-toggle .arrow {
+    position: absolute;
+    right: 10px;
+}
+
+.filter-options {
+    display: none; /* Hidden initially */
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.filter-option {
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.filter-option:hover {
+    background-color: #777;
+}
+
+.hidden {
+    display: none;
+}
+
+.filter-options.show {
+    display: flex; /* Show when the dropdown is active */
+}
+
+/* Footer CSS */
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+footer p,
+footer a {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .filter-section {
+        display: none;
+    }
+
+    .main-section {
+        width: 100%;
+        background-color: #f4f4f4;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .seeking-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .seeking-item button {
+        align-self: flex-end;
+    }
+}

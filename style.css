@@ -44,7 +44,7 @@ header .nav-links a {
 }
 
 .hero {
-    background-image: url('pics/Background.jpeg');
+    background-image: url('./pics/Background.jpeg');
     background-size: cover;
     background-position: center;
     height: 70vh;

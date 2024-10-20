@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketplace</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="market.css">
 </head>
 <body>
     
-     <!-- Header Section -->
+    <!-- Header Section -->
     <header>
         <nav>
             <ul class="nav-links">
@@ -20,8 +20,74 @@
             </ul>
         </nav>
     </header>
-    Marketplace
     
+    <!-- Main Container -->
     
+        <!-- Main Section (Full width above filter) -->
+        <div class="main-section">
+            <!-- Marketplace Slogan Section -->
+            <section class="slogan-section">
+                <div class="slogan-background">
+                    <h1>Find Your Next Campus Deal</h1>
+                    <input type="text" placeholder="Search for items...">
+                </div>
+            </section>
+        </div>
+
+        <!-- Filter Section and Listings Section Side by Side -->
+        <div class="side-by-side">
+            <!-- Filter Section (Fixed) -->
+            <aside class="filter-section">
+                <h2>Filters</h2>
+                <button>Create Listing</button>
+                <button>Create Multiple Listings</button>
+            
+                <!-- Filter Dropdown Button -->
+                <div class="filter-dropdown">
+                    <button id="filter-toggle">Filter <span class="arrow">▼</span></button>
+                    <div class="filter-options hidden">
+                        <button class="filter-option">Option 1</button>
+                        <button class="filter-option">Option 2</button>
+                        <button class="filter-option">Option 3</button>
+                        <button class="filter-option">Option 4</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Listings Section -->
+            <section class="listings-section">
+                <!-- Toggle Buttons -->
+                <div class="toggle-buttons">
+                    <button id="for-sale-button" class="active">Items for Sale</button>
+                    <button id="seeking-button">Seeking</button>
+                </div>
+
+                <!-- Items for Sale Grid -->
+                <div id="for-sale-grid" class="grid-container">
+                    <!-- Listings will be dynamically added here -->
+                </div>
+
+                <!-- Seeking Column List -->
+                <div id="seeking-list" class="seeking-container hidden">
+                    <!-- Seeking items dynamically populated here -->
+                </div>
+            </section>
+        </div>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            <p>&copy; 2024 Campus Swap</p>
+        </div>
+        <div class="footer-center">
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-right">
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="marketScript.js"></script>
 </body>
 </html>

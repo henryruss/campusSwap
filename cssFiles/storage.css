@@ -75,8 +75,7 @@ header .nav-links a:hover {
 }
 
 .slogan-background {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,11 +85,15 @@ header .nav-links a:hover {
 }
 
 .slogan-section h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
-
+.slogan-section p{
+font-size: 1.75rem; /* Slightly larger paragraph */
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add shadow for better contrast */
+}
 .slogan-section input {
     display: flex;
     flex: 1;

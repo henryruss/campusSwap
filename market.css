@@ -85,6 +85,8 @@ header .nav-links a {
     flex: 1;
     padding: 10px;
     font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
 }
 
 /* Side-by-Side Layout (Filter and Listings) */
@@ -180,6 +182,7 @@ header .nav-links a {
     border: 2px solid black;
     border-radius: 30px;
     padding: 20px;
+    background-image: url("./pics/Background.jpeg");
 }
 
 .listing-item img {

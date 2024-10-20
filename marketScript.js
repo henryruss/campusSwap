@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     links.forEach(link => {
         const href = link.getAttribute("href").split("/").pop();  // Get href's page name
-        console.log("Link Href: ", href);  // Check href value
+        
         
         if (href === currentPage) {
             link.classList.add("active");
-            console.log("Active link: ", href);  // Should log the matched link
+            
         }
     });
 

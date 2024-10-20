@@ -54,10 +54,10 @@ header .nav-links a:hover {
 }
 
 .hero {
-    background-image: url('../pics/Background.jpeg');
+    background-image: url('../pics/Background.webp');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    /* height: 85vh; */
     padding-top: 60px;
     display: flex;
     justify-content: center;
@@ -67,28 +67,187 @@ header .nav-links a:hover {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
     text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative; /* To allow positioning of the overlay */
+    z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Make the heading larger */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better contrast */
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Slightly larger paragraph */
     margin: 20px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add shadow for better contrast */
 }
 
-.hero-content input {
-    padding: 10px;
-    font-size: 1rem;
-    width: 50%;
-    border: 0;
-    border-radius: 20px;
+.hero-content .hero-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.hero-content .hero-links li {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.hero-content .hero-links a {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 120px;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    height: 100%;
+    font-size: 2rem;
+}
+
+.hero-content .hero-links a:hover {
+    background-color: #555;
+}
+
+.hero-content .hero-links a.active {
+    background-color: #555;
+    border-radius: 15px;
+}
+
+
+/*Marketplace teaser section */
+.marketTeaser{
+    background-color:white;
+}
+
+.marketTeaser .toptext{
+    display: flex;
+    justify-content: space-between;
+}
+
+.marketTeaser h1{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.marketPlace-content{
+    display: flex;
+    justify-content: space-around;
+}
+.marketTeaser a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    
+}
+.marketTeaser a:visited{
+    color: black;
+}
+
+.marketTeaser a:hover {
+    color: #999;
+}
+/* Individual Listing */
+.listing-item {
+    display: flex;
+    flex: 0;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px;
+    min-width: 200px;
+    margin-top: 0px;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    
+}
+.listing-item .text{
+    display:flex;
+    flex-direction: column;
+}
+.listing-item button {
+    flex: 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 100px;
+}
+.listing-item button.active {
+    background-color: #000;
+}
+
+.listing-item button:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.listing-item button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(250,250,250, 0.6);
+}
+
+.listing-item img {
+    width: 200px; /* Set the fixed width */
+    height: 200px; /* Set the fixed height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.listing-item h3 {
+    margin: 10px 0;
+    justify-content: flex-end;
+}
+
+.listing-item p {
+    font-weight: bold;
+    color: #333;
+    justify-content: flex-end;
+}
+.storageTeaser{
+    background-color: #f4f4f4;
+}
+.storageTeaser h1{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.storageTeaser .toptext{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+}
+.storageTeaser a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    
+}
+.storageTeaser a:visited{
+    color: black;
+}
+
+.storageTeaser a:hover {
+    color: #999;
 }
 
 /* Info Section with Buttons, List, and Picture */
@@ -239,6 +398,7 @@ header .nav-links a:hover {
 
 .faq-question {
     background-color: #fff;
+    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 15px;
@@ -272,7 +432,7 @@ header .nav-links a:hover {
     display: block;
 }
 .cta-section button {
-    padding: 12px 25px;
+    
     background-color: #333;
     color: white;
     border: none;

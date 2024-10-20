@@ -4,22 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storage_Mart</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Storage</title>
+    <link rel="stylesheet" href="./cssFiles/storage.css">
 </head>
 <body>
     
-     <!-- Header Section -->
-     <header>
+    <!-- Header Section -->
+    <header>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Campus Swap</a></li>
                 <li><a href="marketplace.html">Marketplace</a></li>
-                <li><a href="storagemart.html">Storage Mart</a></li>
+                <li><a href="storagemart.html">Storage</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
             </ul>
         </nav>
     </header>
-    Welcome to the Storage Mart
+    
+    <!-- Main Container -->
+    
+        <!-- Main Section (Full width above filter) -->
+        <div class="main-section">
+            <!-- Marketplace Slogan Section -->
+            <section class="slogan-section">
+                <div class="slogan-background">
+                    <h1>Cheap, convienent storage.</h1>
+                    <p>Find affordable storage today!</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Filter Section and Listings Section Side by Side -->
+        <div class="side-by-side">
+            <!-- Filter Section (Fixed) -->
+            <aside class="filter-section">
+                <h2>Filters</h2>
+                <button>Post your space</button>
+            
+                <!-- Filter Dropdown Button -->
+                <div class="filter-dropdown">
+                    <button id="filter-toggle">Filter <span class="arrow">▼</span></button>
+                    <div class="filter-options hidden">
+                        <button class="filter-option">Filter by Price</button>
+                        <button class="filter-option">Filter by Recency</button>
+                        <button class="filter-option">Filter option 3</button>
+                        <button class="filter-option">Filter option 4</button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Listings Section -->
+            <section class="listings-section">
+                <h1>Welcome to Storage!</h1>
+                <h2>Look through available storage, list individual items to be stored, or post your space for rent.
+                </h2>
+                <!-- Toggle Buttons -->
+                <div class="toggle-buttons">
+                    <button id="for-sale-button" class="active">Storage Offers</button>
+                    <button id="seeking-button">Seeking</button>
+                </div>
+
+                <!-- Items for Sale Grid -->
+                <div id="for-sale-grid" class="grid-container">
+                    <!-- Listings will be dynamically added here -->
+                </div>
+
+                <!-- Seeking Column List -->
+                <div id="seeking-list" class="seeking-container hidden">
+                    <!-- Seeking items dynamically populated here -->
+                </div>
+            </section>
+        </div>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            <p>&copy; 2024 Campus Swap</p>
+        </div>
+        <div class="footer-center">
+            <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-right">
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="storageScript.js"></script>
 </body>
 </html>

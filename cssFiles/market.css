@@ -7,9 +7,8 @@ body {
     min-height: 100vh;
     overflow-x: hidden; /* Prevents horizontal scrolling */
     scroll-behavior: smooth;
-    background-color: #333;
+    background-color: white;
 }
-
 /* Header */
 header {
     background-color: #333;
@@ -22,36 +21,30 @@ header {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-
 header .nav-links {
     display: flex;
     justify-content: space-around;
     list-style: none;
     padding: 0;
 }
-
 header .nav-links li {
     margin: 0 20px;
 }
-
 header .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 /* Main Container */
-
 /* Main Section (Full Width) */
 .main-section {
     width: 100%;
     padding: 0px;
     background-color: #f4f4f4;
 }
-
 /* Slogan Section */
 .slogan-section {
-    background-image: url('pics/Trek_Y_1.webp');
+    background-image: url('../pics/Trek_Y_1.webp');
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -62,7 +55,6 @@ header .nav-links a {
     color: white;
     position: relative;
 }
-
 .slogan-background {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -73,13 +65,11 @@ header .nav-links a {
     border-radius: 10px;
     text-align: center;
 }
-
 .slogan-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 .slogan-section input {
     display: flex;
     flex: 1;
@@ -88,17 +78,15 @@ header .nav-links a {
     border-radius: 30px;
     border: none;
 }
-
 /* Side-by-Side Layout (Filter and Listings) */
 .side-by-side {
     display: flex;
     padding: 0px;
 }
-
 /* Filter Section */
 .filter-section {
     background-color: white;
-    width: 20%; /* Adjust as needed */
+    width: 10%; /* Adjust as needed */
     padding: 20px;
     position: sticky;
     top: 60px; /* Position filter below header */
@@ -106,11 +94,9 @@ header .nav-links a {
     height: 100vh;
     margin-right: 0px;
 }
-
 .filter-section h2 {
     margin-bottom: 20px;
 }
-
 .filter-section button {
     display: block;
     width: 100%;
@@ -122,16 +108,26 @@ header .nav-links a {
     cursor: pointer;
     border-radius: 30px;
 }
-
 .filter-section button:hover {
     background-color: #555;
+    transform:scale(1.05);
 }
-
+.filter-section button:active {
+    background-color: #555;
+}
 /* Listings Section */
 .listings-section {
     flex: 1;
     padding: 0 20px;
     background-color: #f4f4f4;
+}
+.listings-section h1{
+    font-size: 24px;
+    text-align: center;
+}
+.listings-section h2{
+    font-size: 20px;
+    text-align: center;
 }
 
 .toggle-buttons {
@@ -140,6 +136,7 @@ header .nav-links a {
     gap: 35px; /* Adds space between buttons */
     margin-bottom: 20px;
     margin: 20px;
+    min-height: 80px;
 }
 
 .toggle-buttons button {
@@ -152,6 +149,8 @@ header .nav-links a {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .toggle-buttons button.active {
@@ -177,16 +176,49 @@ header .nav-links a {
 
 /* Individual Listing */
 .listing-item {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 30px;
     padding: 20px;
-    background-image: url("./pics/Background.jpeg");
+    
+}
+.listing-item .text{
+    display:flex;
+    justify-content: space-between;
+}
+.listing-item button {
+    flex: 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 100px;
+}
+.listing-item button.active {
+    background-color: #000;
+}
+
+.listing-item button:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.listing-item button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(250,250,250, 0.6);
 }
 
 .listing-item img {
-    width: 100%;
+    max-height: 200px;
     border-radius: 5px;
 }
 
@@ -196,8 +228,64 @@ header .nav-links a {
 
 .listing-item p {
     font-weight: bold;
-    color: #007bff;
+    color: #333;
 }
+.seeking-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.seeking-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px;
+}
+.seeking-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.seeking-item h3 {
+    margin: 10px 0;
+}
+
+.seeking-item p {
+    font-weight: bold;
+    color: #333;
+}
+.seeking-item button {
+    flex: 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 200px;
+}
+.seeking-item button.active {
+    background-color: #000;
+}
+
+.seeking-item button:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.seeking-item button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(250,250,250, 0.6);
+}
+
 .arrow {
     font-size: 1rem;
     transition: transform 0.3s ease;

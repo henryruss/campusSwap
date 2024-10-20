@@ -33,27 +33,26 @@ document.addEventListener("DOMContentLoaded", function() {
         if (section === 'forSale') {
             // Array of image file paths
             const imageBank = [
-                "./pics/mark1.jpg",
-                "./pics/mark2.jpg",
-                "./pics/mark3.jpeg",
-                "./pics/mark4.webp",
-                "./pics/mark5.webp",
-                "./pics/mark6.jpg",
-                "./pics/mark7.jpg",
-                "./pics/mark8.webp",
-                "./pics/mark9.webp"
+                "./pics/storage1.webp",
+                "./pics/storage2.webp",
+                "./pics/storage3.jpg",
+                "./pics/storage4.webp",
+                "./pics/storage5.jpg",
+                "./pics/storage6.webp",
+                "./pics/storage7.jpg",
+                "./pics/storage8.jpg",
+                "./pics/storage9.jpg"
             ];
-        
             const storageDescription = [
-                {description: "Bedframe", id: 1},
-                {description: "Toolbox", id: 2},
-                {description: "Black hoodie", id: 3},
-                {description: "Green umbrella", id: 4},
-                {description: "UNC Jordans", id: 5},
-                {description: "Green Xbox controller", id: 6},
-                {description: "Office chair", id: 7},
-                {description: "Couch", id: 8},
-                {description: "Kitchen cutlery", id: 9}
+                {description: "Shed. 200 Sq Ft.", id: 1},
+                {description: "Shed. 150 Sq Ft.", id: 2},
+                {description: "Basement. 300 Sq Ft.", id: 3},
+                {description: "Basement. 500 Sq Ft.", id: 4},
+                {description: "Attic. 150 Sq Ft.", id: 5},
+                {description: "Attic. 100 Sq Ft.", id: 6},
+                {description: "Garage. 250 Sq Ft.", id: 7},
+                {description: "Garage. 200 Sq Ft.", id: 8},
+                {description: "Storage Closet. 75 Sq Ft.", id: 9}
             ];
             
             for (let i = 0; i < 9; i++) {
@@ -75,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 `;
                 forSaleGrid.appendChild(listing);
             }
+            
         }
          else if (section === 'seeking') {
             const itemsToLoad = seekingData.slice(currentIndex, currentIndex + itemsPerPage);
@@ -104,14 +104,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Dummy data to simulate "seeking" listings
     const seekingData = [
-        { description: "Looking for a used bicycle in good condition. Would pay $30", id: 1 },
-        { description: "Seeking textbooks for introductory economics. Would pay $20", id: 2 },
-        { description: "Need a small fridge for dorm room. Would pay $40", id: 3 },
-        { description: "Looking for a secondhand guitar. Would pay $35", id: 4 },
-        { description: "Seeking a bookshelf for my room. Would pay $50", id: 5 },
-        { description: "Looking for gently used furniture. Would pay $40", id: 6 },
+        { description: "Looking to store my couch. Would pay $90", id: 1 },
+        { description: "Need to store my grill. Would pay $80", id: 2 },
+        { description: "Have a mini fridge. Would pay $70", id: 3 },
+        { description: "Have a couple boxes. Would pay $45/month", id: 4 },
+        { description: "Looking to store an old bedframe. Would pay $40/month", id: 5 },
+        { description: "Have a couple chairs. Would pay $80", id: 6 },
         // Add more dummy listings as needed
     ];
+    
 
     // Variables to keep track of current scroll and how many items are displayed
     let currentIndex = 0;

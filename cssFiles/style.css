@@ -54,7 +54,7 @@ header .nav-links a:hover {
 }
 
 .hero {
-    background-image: url('../pics/Background.webp');
+    background-image: url('../pics/Background.jpg');
     background-size: cover;
     background-position: center;
     /* height: 85vh; */
@@ -129,6 +129,7 @@ header .nav-links a:hover {
 /*Marketplace teaser section */
 .marketTeaser{
     background-color:white;
+    
 }
 
 .marketTeaser .toptext{
@@ -137,8 +138,8 @@ header .nav-links a:hover {
 }
 
 .marketTeaser h1{
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .marketPlace-content{
     display: flex;
@@ -224,10 +225,12 @@ header .nav-links a:hover {
 }
 .storageTeaser{
     background-color: #f4f4f4;
+    
 }
 .storageTeaser h1{
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
 }
 .storageTeaser .toptext{
     display: flex;
@@ -253,67 +256,37 @@ header .nav-links a:hover {
 /* Info Section with Buttons, List, and Picture */
 .info-section {
     display: flex;
+    flex-direction: column;
     padding: 50px;
     align-items: flex-start;
-    margin: 20px;
+    
+
 }
 
-.info-section .left-content {
+.info-section .content {
     flex: 1;
     display: flex;
-    flex-direction: column;
-}
-
-.info-section .right-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
 }
 
 .info-section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
-/* .info-section .button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 40px;
-} */
-
-/* .info-section .button-container button {
-    padding: 12px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    min-width: 40px;
-} */
-
-/* .info-section .button-container button:hover {
-    background-color: rgb(20, 20, 20);
-    transform: translateY(-2px);
-} */
-
-/* .info-section .button-container button:active {
-    transform: translateY(0);
-} */
 .info-section .button-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 35px; /* Adds space between buttons */
     margin-bottom: 20px;
-    margin: 20px;
+    margin-right: 20px;
     min-height: 80px;
 }
 
 .info-section .button-container button {
     flex: 1;
-    padding: 10px 20px;
+    padding: 30% 20px;
     background-color: #333;
     color: white;
     border: none;
@@ -344,62 +317,48 @@ header .nav-links a:hover {
     padding-left: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around; /* Optional: To evenly space the list items */
 }
 
 #infoList li {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 20px;
+    flex: 1;
+    margin-left: 20px;
     gap: 20px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    min-height: 200px; /* Set a minimum height for consistency */
 }
 
-#infoList .mini-container {
-    display: flex;
-    flex-direction: column;
-}
 
 #infoList .main-text {
     font-weight: bold;
     font-size: 1.5rem;
     display: block;
     margin-bottom: 5px;
+    text-align: center;
+    min-height: 60px; /* Set a fixed height to ensure alignment */
 }
 
 #infoList .subtext {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #666;
     display: block;
-    align-items: center;
+    text-align: left; /* Center align the text */
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+#infoList .info-image{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
 }
 
-#infoList .change-image {
-    min-width: 40px;
-    min-height: 40px;
-    border: none;
-    background-color: #333;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#infoList .change-image:hover {
-    background-color: rgb(100, 100, 100);
-}
-
-#infoList .change-image:active {
-    background-color: rgb(100, 100, 100);
-}
-
-.right-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
 /* FAQ Section Styling */
 .cta-section {

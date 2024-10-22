@@ -67,7 +67,9 @@ header .nav-links a:hover {
     }
 
     header {
-        padding: 20px 0; /* Increase padding for a more spacious header */
+        padding: 0px; /* Increase padding for a more spacious header */
+        position: absolute;
+
     }
 }
 
@@ -132,93 +134,88 @@ header .nav-links a:hover {
 }
 
 
-/*Marketplace teaser section */
-.marketTeaser{
-    background-color:white;
-    
+/* Marketplace teaser section */
+.marketTeaser {
+    background-color: white;
 }
 
-.marketTeaser .toptext{
+.marketTeaser .toptext {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack the title and link vertically */
+    align-items: center;    /* Center the content */
+    margin: 20px 0;        /* Add some margin */
 }
-.marketTeaser .title{
-    width: 100%; /* Set image width to 100% of the container */
-    max-width: 300px; /* Optional: set a max width for the image */
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #333;
-    height: auto;
+
+.marketTeaser h1 {
+    margin: 10px 0; /* Reduce margins for smaller screens */
+    font-size: 2rem; /* Adjust font size for better visibility */
 }
-.marketTeaser h1{
-    margin-left: 50px;
-    margin-right: 50px;
-}
-.marketPlace-content{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-}
+
 .marketTeaser a {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
     border-radius: 15px;
     transition: background-color 0.3s ease;
-    
+    color: #333; /* Adjust link color */
 }
-.marketTeaser a:visited{
+
+.marketTeaser a:visited {
     color: black;
 }
 
 .marketTeaser a:hover {
     color: #999;
 }
-/* Individual Listing */
+
+/* Content layout adjustments */
+.marketPlace-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Space out items */
+    padding: 0 10px; /* Add padding for better spacing */
+}
+
+/* Adjust listing item styles */
 .listing-item {
     display: flex;
-    flex: 0;
     flex-direction: column;
     text-align: center;
     box-sizing: border-box;
     padding: 8px;
-    min-width: 200px;
-    margin-top: 0px;
-    justify-content: space-between;
-    margin-bottom: 5px;
+    margin: 10px; /* Adjust margin for spacing */
+    width: calc(25% - 20px); /* Four items across on desktop */
 }
-.listing-item .text{
-    display:flex;
+
+.listing-item .text {
+    display: flex;
     flex-direction: column;
 }
-.listing-item .buyButtons{
-    display: flex;
-    width: 100%; /* Set image width to 100% of the container */
-    max-width: 300px; /* Optional: set a max width for the image */
 
+.listing-item .buyButtons {
+    display: flex;
+    flex-direction: row; /* Stack buttons vertically */
 }
+
+/* Button styles */
 .listing-item button {
-    flex: 1;
-    padding: 20px;
+    padding: 10px; /* Adjust padding for buttons */
     background-color: rgb(0, 54, 15);
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    font-weight: 700;
-    width: 100%;
-    height: 50%;
+    font-size: 14px; /* Adjust font size for buttons */
+    width: 100%; /* Ensure buttons take full width */
 }
-.listing-item .left{
+
+.listing-item .left {
     border-bottom-left-radius: 10px;
 }
-.listing-item .right{
+
+.listing-item .right {
     border-bottom-right-radius: 10px;
-}
-.listing-item button.active {
-    background-color: #000;
 }
 
 .listing-item button:hover {
@@ -226,55 +223,43 @@ header .nav-links a:hover {
     transform: scale(1.05);
 }
 
-.listing-item button:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(250,250,250, 0.6);
-}
-.listing-item .subtitle{
-    padding: 0px;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    display: flex;
-    justify-content: space-between;
-    color:#f4f4f4;
-    font-size: .8em;
-}
-.marketTeaser .listing-item h3 a {
-    color: white; /* Set link color to white */
-    text-decoration: none; /* Optional: remove underline */
-}
-
-.marketTeaser .listing-item h3 a:hover {
-    color: lightgray; /* Optional: change color on hover */
-}
-.border img {
+.listing-item .border img {
     width: 100%; /* Set image width to 100% of the container */
-    max-width: 300px; /* Optional: set a max width for the image */
     height: auto; /* Maintain aspect ratio */
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
-.border{
+
+.border {
     display: flex;
     flex-direction: column;
     border: 3px solid black;
     border-radius: 13px;
 }
 
-.listing-item h3 {
-    
-    justify-content: flex-end;
-    width: 100%; /* Set image width to 100% of the container */
-    max-width: 300px; /* Optional: set a max width for the image */
-    color: #f4f4f4
+/* Mobile styles */
+@media (max-width: 600px) {
+    .listing-item {
+        width: 100%; /* Full width on mobile */
+    }
 
+    .marketTeaser h1 {
+        font-size: 1.5rem; /* Reduce heading size for mobile */
+    }
+
+    .marketTeaser .toptext {
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .listing-item button {
+        padding: 15px; /* Increase button padding for easier tapping */
+    }
 }
 
-.listing-item p {
-    font-weight: bold;
-    color: #333;
-    justify-content: flex-end;
-}
+
+
+
+
 
 .storageTeaser{
     background-color: #f4f4f4;

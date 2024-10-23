@@ -129,3 +129,55 @@ faqButtons.forEach(button => {
         arrow.style.transform = answer.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0)';
     });
 });
+// Get the popup element
+const popup = document.getElementById("popup");
+
+// Get the button that opens the popup
+const openPopup = document.getElementById("openPopup");
+
+// Get the element that closes the popup
+const closePopup = document.getElementById("closePopup");
+
+// When the user clicks the link, open the popup
+openPopup.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    popup.style.display = "block"; // Show the popup
+});
+
+// When the user clicks on the close button (X), close the popup
+closePopup.addEventListener('click', function() {
+    popup.style.display = "none"; // Hide the popup
+});
+
+// Optional: Close the popup if the user clicks anywhere outside the popup content
+window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+});
+
+const popup2 = document.getElementById("popup2");
+
+// Get the button that opens the popup
+const openPopup2 = document.getElementById("openPopup2");
+
+// Get the element that closes the popup
+const closePopup2 = document.getElementById("closePopup2");
+
+// When the user clicks the link, open the popup
+openPopup2.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    popup2.style.display = "block"; // Show the popup
+});
+
+// When the user clicks on the close button (X), close the popup
+closePopup2.addEventListener('click', function() {
+    popup2.style.display = "none"; // Hide the popup
+});
+
+// Optional: Close the popup if the user clicks anywhere outside the popup content
+window.addEventListener('click', function(event) {
+    if (event.target === popup2) {
+        popup2.style.display = "none";
+    }
+});

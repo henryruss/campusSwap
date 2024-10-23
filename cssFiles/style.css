@@ -520,3 +520,233 @@ footer a {
     color: white;
     text-decoration: none;
 }
+
+/* The popup container - hidden by default */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, .8); /* Black background with opacity */
+    z-index: 9999; /* High z-index to sit above everything */
+}
+
+/* Popup content */
+.popup-content {
+    position: relative;
+    margin: 5% auto; /* Centered */
+    background-color: white;
+    color: black;
+    width: 90%; /* Almost full-screen width */
+    height: 90%; /* Almost full-screen height */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Add scroll if content overflows */
+}
+
+/* Close button (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+.popup h1{
+    z-index: 9999;
+}
+.popup-content .pics{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    gap: 30px;
+}
+.popup-content .pics img{
+    border: none;
+    border-radius: 10px;
+}
+.popup-content .content-info{
+    Display: flex;
+    flex-direction: column;
+}
+.popup-content .seller-info{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.popup-content .content-info h3{
+    font-size: 1em;
+    
+}
+.popup-content .content-info p{
+    margin-top: -15px;
+    color:#666;
+}
+.popup-content .descriptive-stuff{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+.popup-content .stars{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.popup-content .profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.popup-content .seller-info button{
+    max-width: 200px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(162, 17, 17)
+
+}
+.popup-content .content-info .buyButtons button{
+    max-width: 200px;
+    border: none;
+    
+
+}
+.popup-content .content-info .buyButtons {
+    border: none;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* The popup container - hidden by default */
+.popup2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, .8); /* Black background with opacity */
+    z-index: 9999; /* High z-index to sit above everything */
+}
+
+/* Popup content */
+.popup-content2 {
+    position: relative;
+    margin: 5% auto; /* Centered */
+    background-color: white;
+    color: black;
+    width: 50%; /* Almost full-screen width */
+    height: 65%; /* Almost full-screen height */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Add scroll if content overflows */
+    text-align: left;
+}
+.popup-content2 h1{
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+/* Close button (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.popup-content2 .product{
+    display: flex;
+}
+.popup-content2 .product img{
+    max-width: 150px;
+}
+.popup-content2 .product .description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+.popup-content2 .buttonList{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+}
+.popup-content2 .buttonList button{
+    border: none;
+    border-radius: 5px;
+}
+.popup-content2 .send{
+    max-width: 185px;
+    margin-top: 10px;
+}
+.popup-content2 .buttonList button.offerbutton1{
+    background-color: white;
+    border:1px solid black;
+    color: black;
+}
+.popup-content2 .buttonList button.offerbutton2 {
+    background-color: rgba(30, 172, 59, 0.5);
+    border:1px solid black;
+    color: black;
+}
+.popup-content2 .price-input{
+    display: flex;
+    flex: 1;
+}
+.price-input {
+    position: relative;
+    width: 100%; /* Ensure the container takes up the full width */
+    margin: 20px 0; /* Optional margin */
+}
+
+/* The "USD" prefix */
+.price-input .prefix {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+}
+
+/* Input field */
+.price-input input {
+    width: 100%; /* Make the input stretch the full width of the container */
+    padding-left: 80px; /* Padding to account for the USD prefix */
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+/* Adjust the input field on focus */
+.price-input input:focus {
+    border-color: #007BFF; /* Add a blue border on focus */
+    outline: none;
+}
+.popup2 .send{
+    border: none;
+    border-radius: 5px;
+}

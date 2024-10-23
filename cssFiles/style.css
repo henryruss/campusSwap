@@ -242,7 +242,7 @@ header .nav-links a:hover {
 
 .listing-item .border img {
     width: 100%; /* Set image width to 100% of the container */
-    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1/1; /* Maintain aspect ratio */
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -276,37 +276,11 @@ header .nav-links a:hover {
 
 
 
-
-
-.storageTeaser{
+.storage{
     background-color: #f4f4f4;
-    
-}
-.storageTeaser h1{
-    margin-left: 50px;
-    margin-right: 50px;
-    
-}
-.storageTeaser .toptext{
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-}
-.storageTeaser a {
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 15px;
-    transition: background-color 0.3s ease;
-    
-}
-.storageTeaser a:visited{
-    color: black;
 }
 
-.storageTeaser a:hover {
-    color: #999;
-}
+
 
 /* Info Section with Buttons, List, and Picture */
 .info-section {

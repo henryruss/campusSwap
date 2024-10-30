@@ -724,3 +724,31 @@ footer a {
     border: none;
     border-radius: 5px;
 }
+
+.dropdown-menu {
+    position: absolute;
+    top: 65%; /* Position below the button */
+    right: 0;
+    padding-top: 50px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu a {
+    padding: 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hide the menu by default */
+.hidden {
+    display: none;
+}

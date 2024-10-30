@@ -41,6 +41,17 @@ const storageMartListItems = [
     { mainText: "Make Passive Income", subText: "Earn commission when your items sell in the marketplace. It's an easy way to make money without much effort." },
     { mainText: "Hold Marketplace Items", subText: "Got space? Hold others' items and earn commission when they sell, or keep them after the listing expires." }
 ];
+const profileButton = document.getElementById("profileButton");
+const dropdownMenu = document.getElementById("dropdownMenu");
+    
+profileButton.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("hidden");
+});
+document.addEventListener("click", (event) => {
+    if (!profileButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add("hidden");
+    }
+});
 
 // Initialize Page Function
 function initializePage() {
@@ -80,6 +91,7 @@ function changeImageSmoothly(imageSrc) {
 document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("header .nav-links a");
     const currentPage = window.location.pathname.split("/").pop();  // Get the current file name
+    
 
     links.forEach(link => {
         const href = link.getAttribute("href").split("/").pop();  // Get the file name of href

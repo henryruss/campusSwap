@@ -193,3 +193,54 @@ window.addEventListener('click', function(event) {
         popup2.style.display = "none";
     }
 });
+
+const popup3 = document.getElementById("popup3");
+
+// Get the button that opens the popup
+const openPopup3 = document.getElementById("openPopup3");
+
+// Get the element that closes the popup
+const closePopup3 = document.getElementById("closePopup3");
+
+// When the user clicks the link, open the popup
+openPopup3.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    popup3.style.display = "block"; // Show the popup
+});
+
+// When the user clicks on the close button (X), close the popup
+closePopup3.addEventListener('click', function() {
+    popup3.style.display = "none"; // Hide the popup
+});
+
+// Optional: Close the popup if the user clicks anywhere outside the popup content
+window.addEventListener('click', function(event) {
+    if (event.target === popup3) {
+        popup3.style.display = "none";
+    }
+});
+const popup4 = document.getElementById("popup4");
+
+// Get the button that opens the popup
+const openPopup4 = document.getElementById("openPopup4");
+
+// Get the element that closes the popup
+const closePopup4 = document.getElementById("closePopup4");
+
+// When the user clicks the link, open the popup
+openPopup4.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    popup4.style.display = "block"; // Show the popup
+});
+
+// When the user clicks on the close button (X), close the popup
+closePopup4.addEventListener('click', function() {
+    popup4.style.display = "none"; // Hide the popup
+});
+
+// Optional: Close the popup if the user clicks anywhere outside the popup content
+window.addEventListener('click', function(event) {
+    if (event.target === popup4) {
+        popup4.style.display = "none";
+    }
+});
